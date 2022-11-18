@@ -1,11 +1,10 @@
-import { useState } from 'react'
-
 import Login from './components/Login'
+import { useLocalstorage } from './hooks/useLocalstorage'
 
 import './App.scss'
 
 const App = () => {
-    const [id, setId] = useState()
+    const [id, setId] = useLocalstorage("id", null)
 
     return (
         <>
