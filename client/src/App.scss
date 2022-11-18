@@ -8,3 +8,12 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    display: flex;
+    padding: 0 2rem;
+    max-width: 960px;
+    background: lightgray;
+    align-items: center;
+    justify-content: center;
+}
