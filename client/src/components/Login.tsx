@@ -1,7 +1,7 @@
-import { useRef } from 'react'
-import { v4 as uuidV4 } from 'uuid'
+import { useRef } from "react"
+import { v4 as uuidV4 } from "uuid"
 
-import './Login.scss'
+import "./Login.scss"
 
 const Login = ({ onIdSubmit }: any) => {
     const idRef = useRef<any>()
