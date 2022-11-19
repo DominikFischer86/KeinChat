@@ -3,6 +3,7 @@ import { useLocalstorage } from "./hooks/useLocalstorage"
 
 import Dashboard from "./components/Dashboard"
 import { ContactsProvider } from "./context/ContactsProvider"
+import { ConversationsProvider } from "./context/ConversationsProvider"
 
 import "./App.scss"
 
@@ -11,7 +12,9 @@ const App = () => {
 
   const DashboardWithContext = (
     <ContactsProvider>
-      <Dashboard id={id} />
+      <ConversationsProvider>
+        <Dashboard id={id} />
+      </ConversationsProvider>
     </ContactsProvider>
   )
 

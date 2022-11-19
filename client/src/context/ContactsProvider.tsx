@@ -2,7 +2,7 @@ import { createContext, useContext, ReactNode } from "react"
 import { useLocalstorage } from "../hooks/useLocalstorage"
 
 type ContactContextProps = {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export const ContactsContext = createContext<any>(null)

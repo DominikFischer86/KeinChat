@@ -4,7 +4,6 @@ import "./Contacts.scss"
 
 const Contacts = () => {
   const { contacts } = useContacts()
-  if (!contacts) return null
 
   return (
     <ul className="list-group">
