@@ -1,0 +1,73 @@
+$border-color: 1px solid #ddd;
+$color-primary: rgb(3, 232, 248);
+
+$transition: all 0.25s ease;
+
+.sidebar-container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-container {
+  ul {
+    display: flex;
+    list-style-type: none;
+    background: #eee;
+
+    li {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      border: 1px solid rgba(#eee, 0);
+      border-bottom: 1px solid #ddd;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      &.active {
+        border: 1px solid #ddd;
+        border-bottom: 0;
+        background: #fff;
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.tab-content {
+  border-right: $border-color;
+  overflow: auto;
+  flex-grow: 1;
+}
+
+.id-field {
+  font-size: 12px;
+  padding: 1rem;
+  border-top: $border-color;
+  border-right: $border-color;
+
+  p {
+    color: #888;
+    font-size: 11px;
+  }
+}
+
+.sidebar-create-button {
+  padding: 1rem;
+  border: 0;
+  background: $border-color;
+  cursor: pointer;
+  background: $color-primary;
+  transition: $transition;
+
+  &:hover {
+    background: darken($color-primary, 20%);
+  }
+}
