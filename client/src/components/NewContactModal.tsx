@@ -18,6 +18,7 @@ const NewContactModal = ({ title, closeModal }: NewContactModalProps) => {
   const idRef = useRef<any>(null)
   const nameRef = useRef<any>(null)
   const { createContact, contacts } = useContacts()
+  const submitIsDisabled = !input.id.length || !input.name.length
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
@@ -68,7 +69,7 @@ const NewContactModal = ({ title, closeModal }: NewContactModalProps) => {
               onChange={handleChange}
             />
           </div>
-          <button className="submit-button">Create</button>
+          <button disabled={submitIsDisabled} className="submit-button">Create</button>
         </form>
       </div>
     </>
