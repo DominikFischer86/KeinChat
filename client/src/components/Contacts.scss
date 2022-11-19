@@ -1,0 +1,10 @@
+.list-group {
+  li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
