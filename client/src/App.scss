@@ -44,6 +44,16 @@ body {
   }
 }
 
+.form-checkbox-group {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+
+  input {
+    margin-right: 1rem;
+  }
+}
+
 .submit-button {
   padding: 0.5rem;
   border: 0;
@@ -53,6 +63,16 @@ body {
   transition: $transition;
   cursor: pointer;
   margin-right: 1rem;
+
+  &:disabled {
+    cursor: default;
+    background: #aaa;
+    opacity: 0.5;
+
+    &:hover {
+      background: #aaa;
+    }
+  }
 
   &:hover {
     background: darken($color-primary, 20%);
