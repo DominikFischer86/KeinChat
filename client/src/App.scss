@@ -1,3 +1,7 @@
+$color-primary: rgb(3, 232, 248);
+$border-radius: 5px;
+$transition: all 0.25s ease;
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
@@ -16,4 +20,49 @@ body {
   background: lightgray;
   align-items: center;
   justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  input {
+    padding: 0.5rem;
+    border-width: 2px;
+    border-color: #eee;
+    border-radius: 5px;
+    outline: 0;
+
+    &:focus-visible {
+      border-color: $color-primary;
+    }
+  }
+
+  label {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.submit-button {
+  padding: 0.5rem;
+  border: 0;
+  background: $color-primary;
+  border-radius: $border-radius;
+  color: #000;
+  transition: $transition;
+  cursor: pointer;
+  margin-right: 1rem;
+
+  &:hover {
+    background: darken($color-primary, 20%);
+  }
+
+  &.secondary-button {
+    background: #aaa;
+
+    &:hover {
+      background: darken(#aaa, 20%);
+    }
+  }
 }
