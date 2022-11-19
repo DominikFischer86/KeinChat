@@ -1,19 +1,19 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    display: flex;
-    padding: 0 2rem;
-    max-width: 960px;
-    background: lightgray;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  padding: 0 2rem;
+  max-width: 960px;
+  background: lightgray;
+  align-items: center;
+  justify-content: center;
 }

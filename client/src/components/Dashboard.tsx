@@ -1,11 +1,11 @@
 import Sidebar from "./Sidebar"
 
 type DashboardProps = {
-    id: string
+  id: string
 }
 
 const Dashboard = ({ id }: DashboardProps) => {
-    return <Sidebar id={id} />
+  return <Sidebar id={id} />
 }
 
 export default Dashboard
