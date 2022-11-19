@@ -19,11 +19,18 @@ const Login = ({ onIdSubmit }: any) => {
     <div className="container">
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="idInput">Enter your Id</label>
-          <input id="idInput" type="text" ref={idRef} required />
+          <div className="form-group">
+            <label htmlFor="idInput">Enter your Id</label>
+            <input id="idInput" type="text" ref={idRef} required />
+          </div>
           <div>
-            <button type="submit">Login</button>
-            <button onClick={createNewId} className="secondary-button">
+            <button className="submit-button" type="submit">
+              Login
+            </button>
+            <button
+              onClick={createNewId}
+              className="submit-button secondary-button"
+            >
               Create New Id
             </button>
           </div>
