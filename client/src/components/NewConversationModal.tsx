@@ -1,10 +1,14 @@
 type NewConversationModalProps = {
-  id: string
+  title: string
+  onHide: () => void
 }
 
-const NewConversationModal = () => {
+const NewConversationModal = ({ title, onHide }: NewConversationModalProps) => {
   return (
-    <div className="NewConversationModal-container">Conversation Modal</div>
+    <div className="modal-header">
+      <h2>{title}</h2>
+      <button onClick={onHide}>X</button>
+    </div>
   )
 }
 

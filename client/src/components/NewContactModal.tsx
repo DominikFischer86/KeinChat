@@ -1,9 +1,17 @@
 type NewContactModalProps = {
-  id: string
+  title: string
+  onHide: () => void
 }
 
-const NewContactModal = () => {
-  return <div className="NewContactModal-container">Contact Modal</div>
+const NewContactModal = ({ title, onHide }: NewContactModalProps) => {
+  return (
+    <div className="NewContactModal-container">
+      <div className="modal-header">
+        <h2>{title}</h2>
+        <button onClick={onHide}>X</button>
+      </div>
+    </div>
+  )
 }
 
 export default NewContactModal

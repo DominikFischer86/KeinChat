@@ -51,12 +51,15 @@ const Sidebar = ({ id }: SidebarProps) => {
       >
         New {conversationOpen ? "Conversation" : "Contact"}
       </button>
-      <Modal
-        title={`New ${conversationOpen ? "Conversation" : "Contact"}`}
-        show={modalOpen}
-        onHide={closeModal}
-      >
-        {conversationOpen ? <NewConversationModal /> : <NewContactModal />}
+      <Modal show={modalOpen}>
+        {conversationOpen ? (
+          <NewConversationModal
+            title="Create Conversation"
+            onHide={closeModal}
+          />
+        ) : (
+          <NewContactModal title="Create Contact" onHide={closeModal} />
+        )}
       </Modal>
     </div>
   )
