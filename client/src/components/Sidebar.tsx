@@ -55,10 +55,10 @@ const Sidebar = ({ id }: SidebarProps) => {
         {conversationOpen ? (
           <NewConversationModal
             title="Create Conversation"
-            onHide={closeModal}
+            closeModal={closeModal}
           />
         ) : (
-          <NewContactModal title="Create Contact" onHide={closeModal} />
+          <NewContactModal title="Create Contact" closeModal={closeModal} />
         )}
       </Modal>
     </div>
