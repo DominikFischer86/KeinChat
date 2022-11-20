@@ -2,7 +2,10 @@ import { useEffect, useState } from "react"
 
 const PREFIX = "chat-app-"
 
-export const useLocalstorage = (key: string, initialValue: any) => {
+export const useLocalstorage = (
+  key: string,
+  initialValue: () => void | string
+) => {
   const prefixedKey = PREFIX + key
   const [value, setValue] = useState(() => {
     const jsonValue = localStorage.getItem(prefixedKey)

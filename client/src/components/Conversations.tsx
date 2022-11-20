@@ -1,5 +1,11 @@
 import { useConversations } from "../context/ConversationsProvider"
 
+type ListItemProps = {
+  conversation: { recipients: [] | any; selected: boolean }
+  selectConversationIndex: any
+  index: number
+}
+
 const MAX_RECIPIENTS_BEFORE_TRIM = 2
 const MAX_NAME_LENGTH_BEFORE_TRIM = 14
 
@@ -23,23 +29,42 @@ const recipientList = (conversation: any, recipient: any, index: number) => {
     : trimLongAssNames(recipient.name)
 }
 
+const ListItem = ({
+  conversation,
+  selectConversationIndex,
+  index,
+}: ListItemProps) => (
+  <li
+    onClick={() => selectConversationIndex(index)}
+    className={conversation.selected ? "active" : ""}
+    title={conversation.recipients.map(
+      (recipient: { name: string }) => " " + recipient.name
+    )}
+  >
+    {conversation.recipients.map((recipient: any, index: number) =>
+      recipientList(conversation, recipient, index)
+    )}
+  </li>
+)
+
 const Conversations = () => {
-  const { conversations } = useConversations()
+  const { conversations, selectConversationIndex } = useConversations()
 
   return (
     <ul className="list-group">
-      {conversations.map((conversation: any, index: number) => (
-        <li
-          key={index}
-          title={conversation.recipients.map(
-            (recipient: any) => " " + recipient.name
-          )}
-        >
-          {conversation.recipients.map((recipient: any, index: number) =>
-            recipientList(conversation, recipient, index)
-          )}
-        </li>
-      ))}
+      {conversations.map(
+        (
+          conversation: { recipients: [] | any; selected: boolean },
+          index: number
+        ) => (
+          <ListItem
+            key={index}
+            conversation={conversation}
+            selectConversationIndex={selectConversationIndex}
+            index={index}
+          />
+        )
+      )}
     </ul>
   )
 }

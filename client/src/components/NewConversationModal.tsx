@@ -39,7 +39,7 @@ const NewConversationModal = ({
       </div>
       <div className="modal-content">
         <form onSubmit={handleSubmit}>
-          {contacts.map((contact: any) => (
+          {contacts.map((contact: { id: string; name: string }) => (
             <div key={contact.id} className="form-checkbox-group">
               <input
                 type="checkbox"

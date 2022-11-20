@@ -23,7 +23,7 @@ const NewContactModal = ({ title, closeModal }: NewContactModalProps) => {
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
 
-    if (!!contacts.find((contact: any) => contact.id == input.id))
+    if (!!contacts.find((contact: { id: string }) => contact.id == input.id))
       return setError("ID already exists")
 
     createContact(idRef.current.value, nameRef.current.value)
@@ -69,7 +69,9 @@ const NewContactModal = ({ title, closeModal }: NewContactModalProps) => {
               onChange={handleChange}
             />
           </div>
-          <button disabled={submitIsDisabled} className="submit-button">Create</button>
+          <button disabled={submitIsDisabled} className="submit-button">
+            Create
+          </button>
         </form>
       </div>
     </>
