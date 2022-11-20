@@ -91,3 +91,19 @@ body {
   font-size: 12px;
   color: red;
 }
+
+.list-group {
+  li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+
+    &.active {
+      background: $color-primary;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
