@@ -12,7 +12,7 @@ const App = () => {
 
   const DashboardWithContext = (
     <ContactsProvider>
-      <ConversationsProvider>
+      <ConversationsProvider id={id}>
         <Dashboard id={id} />
       </ConversationsProvider>
     </ContactsProvider>
