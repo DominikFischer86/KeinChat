@@ -4,7 +4,7 @@ const PREFIX = "chat-app-"
 
 export const useLocalstorage = (
   key: string,
-  initialValue: () => void | string
+  initialValue: any
 ) => {
   const prefixedKey = PREFIX + key
   const [value, setValue] = useState(() => {
