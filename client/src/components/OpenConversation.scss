@@ -1,0 +1,37 @@
+$color-primary: rgb(3, 232, 248);
+
+.open-conversation-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #eee;
+  padding: 1rem;
+}
+
+.messages-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+div.input-group {
+  display: flex;
+
+  input {
+    height: 74px;
+    width: 100%;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid #aaa;
+  }
+
+  button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+div.form-group {
+  margin: 0;
+}
