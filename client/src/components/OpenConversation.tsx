@@ -42,7 +42,7 @@ const OpenConversation = () => {
                   {message.text}
                 </div>
                 <div className={message.fromMe ? "sender fromMe" : "sender"}>
-                  {message.fromMe ? "You" : message.sender.name}
+                  {message.fromMe ? "You" : message.senderName}
                 </div>
               </div>
             )
