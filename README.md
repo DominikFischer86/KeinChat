@@ -1,4 +1,4 @@
-# chatApp
+# KeinChat chat app
  Chat App with Typescript React using Vite and Socket.io
  
  ## Install
