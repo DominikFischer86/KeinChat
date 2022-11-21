@@ -23,7 +23,7 @@ const Login = ({ onIdSubmit }: any) => {
             <label htmlFor="idInput">Enter your Id</label>
             <input id="idInput" type="text" ref={idRef} required />
           </div>
-          <div>
+          <div className="button-group">
             <button className="submit-button" type="submit">
               Login
             </button>
